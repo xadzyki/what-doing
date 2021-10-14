@@ -1,0 +1,45 @@
+$activeCol:#17a2b8;
+
+.butnGroup {
+    display: flex;
+    height: 100%;
+
+    .btn {
+        border: 1px solid grey;
+        width: max-content;
+        text-align: center;
+        padding: 0 10px;
+        font-weight: 400;
+    }
+
+    .btn:hover {
+        background: grey;
+        color: #fff;
+    }
+
+    .active {
+        color: #fff;
+        background: $activeCol;
+        border-color: $activeCol;
+    }
+
+    :first-child {
+        border-radius: 10px 0 0 10px;
+        border-right: 0;
+    }
+
+    :last-child {
+        border-radius: 0 10px 10px 0;
+        border-left: 0;
+    }
+}
+
+@media (max-width:650px) {
+    .butnGroup {
+        width: 100%;
+        .btn{
+            height: 40px;
+            width: 100%;
+        }
+    }
+}

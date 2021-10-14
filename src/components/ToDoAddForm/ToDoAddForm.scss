@@ -1,0 +1,60 @@
+@mixin inBor($borRad, $borColor) {
+    border: 1px solid $borColor;
+    border-radius: $borRad;
+}
+
+$heightDiv:50px;
+
+.bottomPanel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        width: 100%;
+        height: $heightDiv;
+        margin-right: 30px;
+        @include inBor(10px, grey);
+        padding: 0 15px;
+    }
+
+    button {
+        width: 300px;
+        height: $heightDiv;
+        @include inBor(10px, grey);
+    }
+
+    button:hover {
+        background: grey;
+        color: #fff;
+    }
+}
+
+@media (max-width:650px) {
+    .bottomPanel {
+        flex-direction: column;
+        width: 100%;
+
+        input {
+            margin-right: 0;
+            width: 94%;
+            margin-bottom: 10px;
+
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .bottomPanel {
+        input {
+            margin-right: 0;
+            width: 91%;
+            margin-bottom: 10px;
+
+        }
+    }
+}

@@ -1,0 +1,40 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+        font-size: 48px;
+        line-height: 1.2rem;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        color: grey;
+    }
+}
+
+@media (max-width:1000px) {
+    header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+            line-height: 1.5rem;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    header {
+        h1 {
+            font-size: 35px;
+            margin-bottom: 15px;
+            line-height: 1.5rem;
+        }
+    }
+}

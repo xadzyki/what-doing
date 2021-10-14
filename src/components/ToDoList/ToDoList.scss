@@ -1,0 +1,125 @@
+@mixin buttonList($size) {
+    min-width: $size;
+    min-height: $size;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+
+.todoList {
+    margin-top: 50px;
+    width: 800px;
+
+    .todo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        margin: 20px 0;
+        border: 1px solid black;
+        border-radius: 0.5em;
+        padding: 10px 45px 10px 45px;
+
+        p {
+            font-size: 1.3rem;
+            line-height: 40px;
+            padding: 0 20px;
+        }
+
+        .btnGroup {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            @include buttonList(40px);
+        }
+
+        button:hover {
+            background: grey;
+            color: #fff;
+        }
+    }
+}
+
+.todo {
+    background: #fff;
+}
+
+.compleate {
+    background: linear-gradient(92.32deg, #adffab 1%, #ffffff 99%);
+
+    .compl {
+        background: linear-gradient(92.32deg, #27c922 10%, #50f55e 90%);
+    }
+}
+
+
+.important {
+    background: linear-gradient(92.32deg, #fca89a 1%, #ffffff 99%);
+
+    .import {
+        background: linear-gradient(45deg, #ff7b3e 10%, #fded8f 90%);
+    }
+}
+
+
+@media (max-width:1000px) {
+    .todoList {
+        width: 600px;
+
+        .todo {
+            p {
+                font-size: 1rem;
+                text-align: center;
+                line-height: 20px;
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .todoList {
+        margin-top: 20px;
+        width: 100%;
+
+        .todo {
+            padding: 10px 25px 10px 25px;
+
+            p {
+                font-size: 0.9rem;
+                line-height: 20px;
+                padding: 0 15px;
+            }
+
+            button {
+                @include buttonList(30px);
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .todoList {
+        margin-top: 15px;
+        width: 100%;
+
+        .todo {
+            padding: 5px 15px 5px 15px;
+
+            p {
+                font-size: 0.75rem;
+                line-height: 15px;
+                padding: 0 10px;
+                font-weight: 500;
+            }
+
+            button {
+                @include buttonList(26px);
+            }
+        }
+    }
+}
