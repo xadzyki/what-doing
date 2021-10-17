@@ -14,7 +14,8 @@ $activeCol:#17a2b8;
 
 @media (max-width:650px) {
     .searchInput {
-        width: 95%;
+        box-sizing: border-box;
+        width: 100%;
         margin: 10px 0;
     }
 
