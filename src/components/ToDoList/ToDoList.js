@@ -23,15 +23,15 @@ const ToDoList = observer(() => {
         <div className={className(t)} key={t.id}>
           <div className="btnGroup">
             <button className="compl" onClick={() => Data.compleatedItem(t)}>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </button>
             <button className="import" onClick={() => Data.importantItem(t)}>
-              <i class="fas fa-fire"></i>
+              <i className="fas fa-fire"></i>
             </button>
           </div>
           <p>{t.title}</p>
-          <button class="trash" onClick={() => Data.deleteItem(t.id)}>
-            <i class="fas fa-trash"></i>
+          <button className="trash" onClick={() => Data.deleteItem(t.id)}>
+            <i className="fas fa-trash"></i>
           </button>
         </div>
       ))}
